@@ -1,0 +1,19 @@
+.product{
+   width: 18rem;
+   height: 23rem; 
+   background-color: hsl(0, 0%, 85%);
+   cursor: pointer;
+}
+
+.product-img{
+    width: 100%;
+    height: 18rem;
+}
+.product-details{
+   padding: 0 10px;
+}
+.product-details .title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
