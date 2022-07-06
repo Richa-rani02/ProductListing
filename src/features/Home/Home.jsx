@@ -23,9 +23,6 @@ export const Home = () => {
                     )) :
                     <h1>Loading...</h1>}
 
-                {/* <ProductCard />
-                <ProductCard />
-                <ProductCard /> */}
             </section>
         </main>
     )
