@@ -11,7 +11,6 @@ export const Home = () => {
             dispatch(getAllProducts());
         }
     },[]);
-    console.log(productList);
     return (
         <main>
             <section className="productlist">
