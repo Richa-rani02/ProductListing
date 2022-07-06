@@ -2,6 +2,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import {getProducts} from "../services/productService";
 const initialState = {
   productList:[],
+  filters:[],
   status: 'idle',
   error:"",
 };
@@ -20,7 +21,19 @@ export const getAllProducts=createAsyncThunk(
 export const productSlice = createSlice({
   name: 'product',
   initialState,
-  reducers: {},
+  reducers:{
+    sortByCategory:(state,action)=>{
+      if(state.filters.some(item=>item===action.payload)){
+        state.filters=state.filters.filter((productCategory) => productCategory !== action.payload)
+      }else{
+        state.filters=[...state.filters, action.payload];
+      } 
+    },
+    clearAll:(state)=>{
+      state.filters=[];
+    }
+
+  },
   extraReducers:{
     [getAllProducts.pending]:(state,action)=>{
       state.status="pending";
@@ -39,8 +52,5 @@ export const productSlice = createSlice({
     }
   }
 });
-
-// export const { increment, decrement, incrementByAmount } = counterSlice.actions;
-
-// export const selectCount = (state) => state.counter.value;
+export const { sortByCategory,clearAll } = productSlice.actions;
 export const productReducer=productSlice.reducer; 

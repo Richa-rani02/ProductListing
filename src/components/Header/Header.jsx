@@ -1,7 +1,9 @@
 import React from 'react'
-
+import "./Header.css";
 export const Header = () => {
   return (
-    <div>Header</div>
+    <header>
+      <h2>CodeGama</h2>
+      </header>
   )
 }

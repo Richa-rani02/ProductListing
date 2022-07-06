@@ -1,7 +1,9 @@
-import React from 'react'
-
+import React from 'react';
+import "./Footer.css";
 export const Footer = () => {
   return (
-    <div>Footer</div>
+    <footer>
+      <h2>made by Richa</h2>
+      </footer>
   )
 }

@@ -1,0 +1,12 @@
+.checkbox{
+    margin: 10px;
+}
+
+.clear-btn{
+    padding: 10px;
+    background-color: cadetblue;
+    border:none;
+    outline: none;
+    color: white;
+    margin-left: 2rem;
+}
